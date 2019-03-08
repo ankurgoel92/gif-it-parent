@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<description>GIF it parent</description>
+	<name>gif-it-parent</name>
+
+	<groupId>com.ag</groupId>
+	<artifactId>gif-it-parent</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.3.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<email>ankurgoel.juit@gmail.com</email>
+			<name>Ankur Goel</name>
+			<url>https://github.com/ankurgoel92</url>
+			<id>ankurgoel92</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<commons.io.version>2.4</commons.io.version>
+		<javax.inject.version>1</javax.inject.version>
+		<javacv.version>1.1</javacv.version>
+		<animated.gif.lib.version>1.2</animated.gif.lib.version>
+		<node.version>v4.3.0</node.version>
+		<npm.version>3.7.2</npm.version>
+		<frontend.maven.plugin.version>0.0.28</frontend.maven.plugin.version>
+	</properties>
+
+	<modules>
+		<module>gif-it-client</module>
+		<module>gif-it-webapp</module>
+		<module>gif-it-autoconf</module>
+	</modules>
+</project>
