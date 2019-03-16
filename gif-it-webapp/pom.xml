@@ -61,13 +61,32 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
+			
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<configuration>
+					<imageName>ag/gif-it-image</imageName>
+					<baseImage>java:8</baseImage>
+					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+					<!-- copy the service's jar file from target into the root directory of the image -->
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+			
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
@@ -88,6 +107,7 @@
 					</execution>
 				</executions>
 			</plugin>
+	
 		</plugins>
 
 	</build>
