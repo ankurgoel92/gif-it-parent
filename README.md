@@ -1,4 +1,10 @@
 ## About
+A small maven multi module project to convert uploaded videos into gifs. Also delpoyed the docker image on aws.
+
+## Demo
+![gif-it demo GIF](gif-it-demo.gif)
+
+## Tech Stack
 
 UI: AngularJS + WebPack + ES6 (ES2015)
 
